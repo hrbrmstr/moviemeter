@@ -6,6 +6,7 @@
 #'
 #' @name moviemeter
 #' @docType package
+#' @note MovieMeter requests citations when publishing any derivative work from their data.
 #' @author Bob Rudis (bob@@rud.is)
 #' @import purrr httr tibble
 #' @importFrom jsonlite fromJSON

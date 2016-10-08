@@ -15,6 +15,9 @@ mm_search(terms)
 \description{
 Search for films
 }
+\note{
+MovieMeter requests citations when publishing any derivative work from their data.
+}
 \examples{
 mm_search("brave little toaster")
 }

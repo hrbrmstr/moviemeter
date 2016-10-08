@@ -11,6 +11,9 @@ Get an API key: \url{https://www.moviemeter.nl/site/registerclient/}
 \details{
 Read about their API \url{http://wiki.moviemeter.nl/index.php/API}
 }
+\note{
+MovieMeter requests citations when publishing any derivative work from their data.
+}
 \author{
 Bob Rudis (bob@rud.is)
 }

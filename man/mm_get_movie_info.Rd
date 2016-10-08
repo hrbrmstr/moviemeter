@@ -15,6 +15,9 @@ mm_get_movie_info(movie_id)
 \description{
 Pass in either a MovieMeter ID or IMDB code to retrieve movie info.
 }
+\note{
+MovieMeter requests citations when publishing any derivative work from their data.
+}
 \examples{
 mm_get_movie_info(5208)
 }

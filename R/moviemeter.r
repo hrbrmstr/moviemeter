@@ -4,6 +4,7 @@
 #' @return \code{tibble}
 #' @references \url{http://wiki.moviemeter.nl/index.php/API}
 #' @export
+#' @note MovieMeter requests citations when publishing any derivative work from their data.
 #' @examples
 #' mm_search("brave little toaster")
 mm_search <- function(terms) {
@@ -29,6 +30,7 @@ mm_search <- function(terms) {
 #' @return \code{list}
 #' @references \url{http://wiki.moviemeter.nl/index.php/API}
 #' @export
+#' @note MovieMeter requests citations when publishing any derivative work from their data.
 #' @examples
 #' mm_get_movie_info(5208)
 mm_get_movie_info <- function(movie_id) {
