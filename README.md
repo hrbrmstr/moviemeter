@@ -109,6 +109,32 @@ mm_get_movie_info(5208)
     ## $directors
     ## [1] "Jerry Rees"
 
+Generate a data frame for 3 movies (w/o useless fields):
+
+``` r
+library(purrr)
+
+imdb_ids <- c("tt1107846", "tt0282552", "tt0048199")
+
+df <- map_df(imdb_ids, ~mm_get_movie_info(.)[1:11])
+
+dplyr::glimpse(df)
+```
+
+    ## Observations: 3
+    ## Variables: 11
+    ## $ id                <int> 57161, 6465, 33351
+    ## $ url               <chr> "https://www.moviemeter.nl/film/57161", "https://www.moviemeter.nl/film/6465", "https://w...
+    ## $ year              <int> 2007, 2002, 1955
+    ## $ imdb              <chr> "tt1107846", "tt0282552", "tt0048199"
+    ## $ title             <chr> "Theft", "Riders", "Illegal"
+    ## $ display_title     <chr> "Theft", "Riders", "Illegal"
+    ## $ alternative_title <chr> NA, "Steal", NA
+    ## $ plot              <chr> "Een naïeve dorpsjongen wordt verliefd op een crimineel. Guy was altijd een nette beschaa...
+    ## $ duration          <int> 90, 83, 88
+    ## $ votes_count       <int> 1, 293, 20
+    ## $ average           <dbl> 2.00, 2.55, 3.42
+
 ### Test Results
 
 ``` r
@@ -118,7 +144,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Oct  8 10:44:57 2016"
+    ## [1] "Sat Oct  8 11:11:07 2016"
 
 ``` r
 test_dir("tests/")

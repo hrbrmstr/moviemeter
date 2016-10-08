@@ -37,6 +37,18 @@ mm_search("brave little toaster")
 mm_get_movie_info(5208)
 ```
 
+Generate a data frame for 3 movies (w/o useless fields):
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(purrr)
+
+imdb_ids <- c("tt1107846", "tt0282552", "tt0048199")
+
+df <- map_df(imdb_ids, ~mm_get_movie_info(.)[1:11])
+
+dplyr::glimpse(df)
+```
+
 ### Test Results
 
 ```{r message=FALSE, warning=FALSE, error=FALSE}
