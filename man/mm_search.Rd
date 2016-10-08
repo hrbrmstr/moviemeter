@@ -13,7 +13,7 @@ mm_search(terms)
 \code{tibble}
 }
 \description{
-Search for films
+You need a MovieMeter API KEY. See \link{moviemeter_api_key} for more info.
 }
 \note{
 MovieMeter requests citations when publishing any derivative work from their data.

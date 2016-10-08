@@ -1,5 +1,7 @@
 #' Search for films
 #'
+#' You need a MovieMeter API KEY. See \link{moviemeter_api_key} for more info.
+#'
 #' @param terms atomic character vector to use in the search
 #' @return \code{tibble}
 #' @references \url{http://wiki.moviemeter.nl/index.php/API}
@@ -26,6 +28,8 @@ mm_search <- function(terms) {
 #'
 #' Pass in either a MovieMeter ID or IMDB code to retrieve movie info.
 #'
+#' You need a MovieMeter API KEY. See \link{moviemeter_api_key} for more info.
+#'
 #' @param movie_id either a MovieMeter ID or IMDB code
 #' @return \code{list}
 #' @references \url{http://wiki.moviemeter.nl/index.php/API}
@@ -42,6 +46,7 @@ mm_get_movie_info <- function(movie_id) {
 
   res <- httr::content(res, as="text", encoding="UTF-8")
   res <- jsonlite::fromJSON(res)
+  res <- purrr::map(res, ~. %||% NA)
 
   res
 

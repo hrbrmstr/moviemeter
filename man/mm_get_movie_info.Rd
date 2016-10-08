@@ -15,6 +15,9 @@ mm_get_movie_info(movie_id)
 \description{
 Pass in either a MovieMeter ID or IMDB code to retrieve movie info.
 }
+\details{
+You need a MovieMeter API KEY. See \link{moviemeter_api_key} for more info.
+}
 \note{
 MovieMeter requests citations when publishing any derivative work from their data.
 }
