@@ -4,6 +4,10 @@ output: rmarkdown::github_document
 
 `moviemeter` : Tools to work with the MovieMeter API
 
+Get an API key: <https://www.moviemeter.nl/site/registerclient/>
+
+Read about their API <http://wiki.moviemeter.nl/index.php/API>
+
 The following functions are implemented:
 
 - `mm_get_movie_info`:	Retrieve film information
@@ -13,7 +17,7 @@ The following functions are implemented:
 ### Installation
 
 ```{r eval=FALSE}
-devtools::install_git("https://gitlab.com/hrbrmstr/moviemeter.git")
+devtools::install_git("https://github.com/hrbrmstr/moviemeter.git")
 ```
 
 ```{r message=FALSE, warning=FALSE, error=FALSE}

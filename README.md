@@ -1,6 +1,10 @@
 
 `moviemeter` : Tools to work with the MovieMeter API
 
+Get an API key: <https://www.moviemeter.nl/site/registerclient/>
+
+Read about their API <http://wiki.moviemeter.nl/index.php/API>
+
 The following functions are implemented:
 
 -   `mm_get_movie_info`: Retrieve film information
@@ -10,7 +14,7 @@ The following functions are implemented:
 ### Installation
 
 ``` r
-devtools::install_git("https://gitlab.com/hrbrmstr/moviemeter.git")
+devtools::install_git("https://github.com/hrbrmstr/moviemeter.git")
 ```
 
 ``` r
@@ -114,7 +118,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Oct  8 10:42:24 2016"
+    ## [1] "Sat Oct  8 10:44:57 2016"
 
 ``` r
 test_dir("tests/")
